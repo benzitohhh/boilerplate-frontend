@@ -1,10 +1,12 @@
 # boilerplate-frontend
 
+To run in development: `npm install; npm run dev`
+
 To remove jquery/bootstrap: delete lines in index.html, and package.json
 
 CSS is in `/src/main.css` (compiled via less-css, and inlined at the top of the body)
 
-To deploy to github pages: `./deploy.sh`
+To deploy to github pages: `./deploy_to_github_pages.sh`
 
 Still todo:
 - threejs example
