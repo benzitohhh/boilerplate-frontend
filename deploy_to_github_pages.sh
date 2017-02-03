@@ -4,14 +4,13 @@ set -o pipefail
 set -o nounset
 
 echo "Deploy to github pages..."
-read -p "Are you sure? This will wipe any uncommited local changes" -n 1 -r
+echo "This requires that gh-pages branch is already created. i.e. git checkout -b gh-pages"
+read -p "This will wipe any uncommited local changes. Are you sure you wish to proceed? (Y/n)" -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # Check out gh-pages branch
     git checkout gh-pages
-
-    # TODO: if error, give warning that probably need to create the branch (i.e. git checkout -b gh-pages)
 
     # Pull master into it
     git reset --hard master
@@ -34,7 +33,7 @@ then
     # Commit and force push
     git add *
     git commit -a -m 'update'
-    git push --set-upstream origin gh-pages
+    git push -f --set-upstream origin gh-pages
 
     # Switch back to master
     git checkout master
