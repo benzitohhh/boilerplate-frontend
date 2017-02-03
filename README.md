@@ -1,5 +1,7 @@
 # boilerplate-frontend
 
+To remove jquery/bootstrap: delete lines in index.html, and package.json
+
 Still todo:
 
 - deploy to github-pages script

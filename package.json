@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "compile": "NODE_ENV=production webpack",
-    "compile-dev": "webpack",
-    "start": "http-server -p 8080 app"
+    "start": "http-server -p 8080 app",
+    "postinstall": "npm run copy-jquery && npm run copy-bootstrap",
+    "copy-jquery": "cp -r node_modules/jquery/dist app/lib/jquery",
+    "copy-bootstrap": "cp -r node_modules/bootstrap/dist app/lib/bootstrap"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,9 @@
   },
   "homepage": "https://github.com/benzitohhh/boilerplate-frontend#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "detector-webgl": "^2.0.0",
+    "jquery": "^3.1.1",
     "three": "^0.80.1"
   },
   "devDependencies": {
