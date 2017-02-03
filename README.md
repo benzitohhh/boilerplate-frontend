@@ -2,10 +2,11 @@
 
 To remove jquery/bootstrap: delete lines in index.html, and package.json
 
-Still todo:
+CSS is in `/src/main.css` (compiled via less-css, and inlined at the top of the body)
 
-- deploy to github-pages script
-- jquery/bootrap: add to npm build (BIG files - no need to include in the webpack build)
+To deploy to github pages: `./deploy.sh`
+
+Still todo:
 - threejs example
 - react
 - redux
