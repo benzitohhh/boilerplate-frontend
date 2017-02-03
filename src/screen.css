@@ -1,0 +1,10 @@
+/* -*- mode: less-css -*- */
+
+body {
+    background-color: #121212;
+    font-family: "Prosto One", sans-serif;
+    color: #999;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
