@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "compile": "NODE_ENV=production webpack",
-    "start": "http-server -p 8080 -r app"
+    "compile-dev": "webpack",
+    "start": "http-server -p 8080 app"
   },
   "repository": {
     "type": "git",
